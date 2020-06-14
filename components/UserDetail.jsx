@@ -10,14 +10,17 @@ import RaisedButton from 'material-ui/styles/RaisedButton';
 
 class UserDetail extends Component
 {
+   
    render()
    {
       return(
               <MuiThemeProvider>
-              <div>
+              <React.Fragment>
+              <RaisedButton/>
 
-                <TextField/>
-             </div>
+                
+              </React.Fragment>
+
               </MuiThemeProvider>
 
 
