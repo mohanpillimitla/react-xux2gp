@@ -15,51 +15,31 @@ class UserForm extends Component
     bio:'',
     occupation:'',
     city:''
-
-
-
-
   }
   //handlechange
-
-
   handleChange=input=>(event)=>{
 
     this.setState({[input]:event.target.value})
 
   }
-
-
-
-
-
-
   //nextstep
 
   nextstep  =()=>
   {
     const {step}=this.state;
     this.setState({
-      step:(step+1)%3
+      step:(step+1)%4
 
     })
-
-
-
-
   }
 //nexstep
-
-   nextstep  =()=>
+  nextstep  =()=>
   {
     const {step}=this.state;
     this.setState({
       step:step-1
 
     })
-
-
-
 
   }
 
@@ -68,7 +48,7 @@ class UserForm extends Component
      
        const {step}=this.state;
        const{ firstname,email,lastname,bio,occupation,city}=this.state;
-
+       const values={firstname,email,lastname,bio,occupation,city}
      switch(step)  
      {
        case 0:
@@ -77,14 +57,7 @@ class UserForm extends Component
 
                  nextstep={this.nextstep}
                  prevstep={this.prevstep}
-
-                 
-                 
-                 
-                 
-                 
-                 
-                 
+                 values={} 
                  />
 
            ) 
@@ -99,19 +72,13 @@ class UserForm extends Component
 
            ) 
 
+        case 3:
+        return(
+          <h1>helloworld</h1>
 
-
-
-
-
-
+            )
      }
   }
-
-
-
-
-
 
 }
 

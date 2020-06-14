@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import moduleName from 'material-ui/styles/MuiThemeProvider';
 
 
 class UserDetail extends Component
@@ -8,7 +8,7 @@ class UserDetail extends Component
    {
       return(
 
-                <h1>hello</h1>
+                ''
 
       )
 
