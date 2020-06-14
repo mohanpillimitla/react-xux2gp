@@ -13,8 +13,13 @@ class UserDetail extends Component
    render()
    {
       return(
+              <MuiThemeProvider>
+              <div>
 
-                ''
+                <TextField/>
+             </div>
+              </MuiThemeProvider>
+
 
       )
 
