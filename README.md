@@ -1,3 +1,4 @@
 # react-xux2gp
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/react-xux2gp)
+
+this is simple multistep form in react
