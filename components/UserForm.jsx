@@ -1,16 +1,21 @@
 import React, { Component } from 'react';
 
+
+import UserDetail from './UserDetail';
+
 class UserForm extends Component
 {
 
   state={
 
-    step:1,
+    step:0,
     firstname:'',
     email:'',
     lastname:'',
     bio:'',
     occupation:'',
+    city:''
+
 
 
 
@@ -35,7 +40,7 @@ class UserForm extends Component
   {
     const {step}=this.state;
     this.setState({
-      step:step+1
+      step:(step+1)%3
 
     })
 
@@ -60,15 +65,49 @@ class UserForm extends Component
 
    render()
    {
-     return (
-       
-       
-       <h1>hello</h1>
-       
-       
-       )
+     
+       const {step}=this.state;
+       const{ firstname,email,lastname,bio,occupation,city}=this.state;
 
-   }
+     switch(step)  
+     {
+       case 0:
+       return(
+                 <UserDetail
+
+                 nextstep={this.nextstep}
+                 prevstep={this.prevstep}
+
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 />
+
+           ) 
+       case 1:
+       return(
+         <h1>world</h1>
+
+           ) 
+       case 2:
+       return(
+         <h1>helloworld</h1>
+
+           ) 
+
+
+
+
+
+
+
+     }
+  }
+
 
 
 
