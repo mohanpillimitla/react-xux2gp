@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import  RaisedButton from 'material-ui/RaisedButton';
+import AppBar from 'material-ui/AppBar';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import AppBar from 'material-ui/styles/AppBar';
 
-import TextField from 'material-ui/styles/TextField';
 
-import RaisedButton from 'material-ui/styles/RaisedButton';
+
+import PropTypes from 'prop-types';
+
+
 
 
 
@@ -14,14 +17,22 @@ class UserDetail extends Component
    render()
    {
       return(
-              <MuiThemeProvider>
-              <React.Fragment>
-              <RaisedButton/>
+        <MuiThemeProvider>
 
-                
-              </React.Fragment>
+        <React.Fragment>
 
-              </MuiThemeProvider>
+                 <AppBar/>
+      
+            
+          
+          
+
+                     
+
+        </React.Fragment>
+      </MuiThemeProvider>
+
+
 
 
       )
