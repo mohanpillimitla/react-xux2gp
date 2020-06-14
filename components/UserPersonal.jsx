@@ -13,7 +13,7 @@ import TextField from 'material-ui/TextField';
 
 
 
-class UserDetail extends Component
+class UserPersonal extends Component
 {
    
    render()
@@ -36,9 +36,9 @@ class UserDetail extends Component
 
                             <TextField
 
-                            hintText="enter your firstname"
-                            floatingLabelText='firstname'
-                            onChange={this.props.handleChange('firstname')}
+                            hintText="enter your city"
+                            floatingLabelText='city'
+                            onChange={this.props.handleChange('city')}
                             defaultValue={values.firstname}
 
 
@@ -46,9 +46,9 @@ class UserDetail extends Component
                               <br/>
                             <TextField
 
-                            hintText="enter your lastname"
-                            floatingLabelText='lastname'
-                            onChange={this.props.handleChange('lastname')}
+                            hintText="enter your occupation"
+                            floatingLabelText='occupation'
+                            onChange={this.props.handleChange('occupation')}
                             defaultValue={values.lastname}
 
 
@@ -57,9 +57,9 @@ class UserDetail extends Component
 
                             <TextField
 
-                            hintText="enter your email"
-                            floatingLabelText='email'
-                            onChange={this.props.handleChange('email')}
+                            hintText="enter your bio "
+                            floatingLabelText='bio'
+                            onChange={this.props.handleChange('bio')}
                             defaultValue={values.email}
 
 
@@ -102,5 +102,5 @@ class UserDetail extends Component
 
 }
 
-export default UserDetail;
+export default UserPersonal;
                          

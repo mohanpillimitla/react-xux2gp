@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 
 import UserDetail from './UserDetail';
+import UserPersonal from './UserPersonal';
+
 
 class UserForm extends Component
 {
@@ -24,7 +26,7 @@ class UserForm extends Component
   }
   //nextstep
 
-  nextstep  =()=>
+  nextStep  =()=>
   {
     const {step}=this.state;
     this.setState({
@@ -33,7 +35,7 @@ class UserForm extends Component
     })
   }
 //nexstep
-  nextstep  =()=>
+  prevtep  =()=>
   {
     const {step}=this.state;
     this.setState({
@@ -55,8 +57,8 @@ class UserForm extends Component
        return(
                  <UserDetail
 
-                 nextstep={this.nextstep}
-                 prevstep={this.prevstep}
+                 nextStep={this.nextStep}
+                 prevStep={this.prevStep}
                  handleChange={this.handleChange}
                  values={values}
                  />
@@ -64,8 +66,13 @@ class UserForm extends Component
            ) 
        case 1:
        return(
-         <h1>world</h1>
+                <UserPersonal
 
+                 nextStep={this.nextStep}
+                 prevStep={this.prevStep}
+                 handleChange={this.handleChange}
+                 values={values}
+                 />
            ) 
        case 2:
        return(
