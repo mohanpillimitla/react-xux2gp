@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 
 import UserDetail from './UserDetail';
 import UserPersonal from './UserPersonal';
+import Confirm from './Confirm';
+
 
 
 class UserForm extends Component
@@ -10,7 +12,7 @@ class UserForm extends Component
 
   state={
 
-    step:0,
+    step:1,
     firstname:'',
     email:'',
     lastname:'',
@@ -30,12 +32,12 @@ class UserForm extends Component
   {
     const {step}=this.state;
     this.setState({
-      step:(step+1)%4
+      step:step+1
 
     })
   }
 //nexstep
-  prevtep  =()=>
+  prevStep  =()=>
   {
     const {step}=this.state;
     this.setState({
@@ -53,18 +55,18 @@ class UserForm extends Component
        const values={firstname,email,lastname,bio,occupation,city}
      switch(step)  
      {
-       case 0:
+       case 1:
        return(
                  <UserDetail
 
                  nextStep={this.nextStep}
-                 prevStep={this.prevStep}
+                
                  handleChange={this.handleChange}
                  values={values}
                  />
 
            ) 
-       case 1:
+       case 2:
        return(
                 <UserPersonal
 
@@ -74,13 +76,19 @@ class UserForm extends Component
                  values={values}
                  />
            ) 
-       case 2:
+       case 3:
        return(
-         <h1>helloworld</h1>
+               <Confirm
+
+                 nextStep={this.nextStep}
+                 prevStep={this.prevStep}
+                
+                 values={values}
+                 />
 
            ) 
 
-        case 3:
+        case 4:
         return(
           <h1>helloworld</h1>
 
