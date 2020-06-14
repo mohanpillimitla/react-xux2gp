@@ -57,7 +57,8 @@ class UserForm extends Component
 
                  nextstep={this.nextstep}
                  prevstep={this.prevstep}
-                 values={} 
+                 handleChange={this.handleChange}
+                 values={values}
                  />
 
            ) 
